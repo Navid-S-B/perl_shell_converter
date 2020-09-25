@@ -1,0 +1,13 @@
+Date, Start, Stop, Activity, Comments
+08/08/2020, 18:30, 22:00, Coding Subset 0, Finished coding and its now time to test
+08/08/2020, 22:00, 23:37, Debugging Subset 0, Finihsed testing subset 0 and built test and demo code
+09/08/2020, 00:00, 01:33, Coding Subset 1, Finished coding subset 1 and now I am testing it for bugss
+09/08/2020, 00:00, 01:33, Debugging Subset 1, Finished testing subset 1 and built draft demo and test code
+09/08/2020, 00:00, 03:349, Debugging Subset 1, Finished testing subset 1 and finalised demo and test code
+09/08/2020, 12:40, 5:00, Coding Subset 2, Started to build subset 2 function
+09/08/2020, 16:00, 18:00, Debugging and Testing Subset 2, Tested subset 2 function now I am adding demo code
+09/08/2020, 18:00, 19:47, Debugging Subset 2, Finished building test and demo code for subset 2 (many bugs were found)
+09/08/2020, 19:47, 20:50, Debugging Subset 3, Subset 3 features were installed earlier in Subsets (passes autotests)
+09/08/2020, 20:50, 21:06, Finished Subset 3, Subset 3 passed all tests and now I am creating my final test and demo files
+09/08/2020, 21:06, 23:22, Finished Demo and Testing Suite, fixed bugs based on my tests and demos
+
