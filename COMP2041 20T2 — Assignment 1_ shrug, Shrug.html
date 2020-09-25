@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://cgi.cse.unsw.edu.au/~cs2041/20T2/assignments/ass1/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+COMP2041 20T2 —
+
+Assignment 1: shrug, Shrug
+
+</title><link rel="canonical" href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/">
+
+<link rel="stylesheet" href="./COMP2041 20T2 — Assignment 1_ shrug, Shrug_files/bootstrap.min.css" integrity="sha256-aAr2Zpq8MZ+YA/D6JtRD3xtrwpEz2IqOS+pWD/7XKIw=" crossorigin="anonymous">
+<link rel="stylesheet" href="./COMP2041 20T2 — Assignment 1_ shrug, Shrug_files/course.css">
+
+<script src="./COMP2041 20T2 — Assignment 1_ shrug, Shrug_files/jquery.min.js.download" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="./COMP2041 20T2 — Assignment 1_ shrug, Shrug_files/popper.min.js.download" integrity="sha256-/ijcOLwFf26xEYAjW75FizKVo5tnTYiQddPZoLUHHZ8=" crossorigin="anonymous"></script>
+<script src="./COMP2041 20T2 — Assignment 1_ shrug, Shrug_files/bootstrap.min.js.download" integrity="sha256-OFRAJNoaD8L3Br5lglV7VyLRf0itmoBzWUoM+Sji4/8=" crossorigin="anonymous"></script>
+
+<script src="./COMP2041 20T2 — Assignment 1_ shrug, Shrug_files/course.js.download"></script>
+
+<!-- <script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
+
+<!-- MathJax. -->
+
+
+
+
+
+
+<script type="text/javascript" async="" src="./COMP2041 20T2 — Assignment 1_ shrug, Shrug_files/MathJax.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body class="d-flex flex-column" style="min-height: 100vh;"><div id="MathJax_Message" style="display: none;"></div>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light no-print" id="header-navbar">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/">
+      COMP(2041|9044) 20T2
+    </a>
+
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/outline">Outline</a></li>
+        <li class="nav-item active"><a class="nav-link" href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/student/">Submissions</a></li>
+        <li class="nav-item active"><a class="nav-link" href="https://discourse.cse.unsw.edu.au/cs2041/">Forum</a></li>
+        
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<main class="container" aria-label="Content" style="flex: 1; padding-top: 4rem;">
+
+
+<header>
+
+<h1 class="text-center">
+Assignment 1: shrug, Shrug
+</h1>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="text-right text-muted"><small>
+version: 0.4 
+last updated: 2020-07-06 16:00
+</small></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Aims</h2>
+<p>
+This assignment aims to give you
+</p><ul>
+<li> practice in Shell programming generally
+</li><li> a clear concrete understanding of Git's core semantics
+</li></ul>
+<p>
+<strong>Note</strong>:
+the material in the lecture notes
+will not be sufficient by itself
+to allow you to complete this assignment.
+You may need to search on-line documentation for Shell, Git, etc.
+Being able to search documentation efficiently
+for the information you need
+is a <em>very</em> useful skill
+for any kind of computing work.
+
+</p><h2>Introduction</h2>
+<p>
+Your task in this assignment is
+to implement <strong>Shrug</strong>,
+a subset of the version control system <a href="https://en.wikipedia.org/wiki/Git">Git</a>.
+
+</p><p>
+Git is a <em>very</em> complex program which has many individual commands.
+You will implement only a few of the most important commands.
+You will also be given a number of simplifying assumptions,
+which make your task easier.
+
+</p><p>
+<abbr>Shrug</abbr> is a contraction of <strong>Sh</strong>ell-<strong>ru</strong>nning-<strong>g</strong>it.
+
+</p><p>
+You must implement <strong>Shrug</strong> in Shell.
+
+</p><p>
+Interestingly, early versions of Git made heavy use of Shell and Perl.
+
+
+</p><h2>Reference implementation</h2>
+<p>
+Many aspects of this assignment
+are not fully specified in this document; instead,
+you must match the behaviour of a reference implementation.
+
+</p><p>
+For example, your script <code>shrug-add</code>
+should match the behaviour of <code>2041 shrug-add</code> exactly,
+including producing the same error messages.
+
+</p><p>
+Provision of a reference implementation is
+a common method to provide or define
+an operational specification,
+and it's something you will likely need to do after you leave UNSW.
+
+</p><p>
+Discovering and matching
+the reference implementation's behaviour
+is deliberately part of the assignment.
+
+</p><p>
+While the code in the reference implementation is fairly straight forward,
+reverse-engineering its behaviour
+is obviously not so simple,
+and is a nice example of
+how coming to grips with
+the precise semantics of
+an apparently obvious task
+can still be challenging.
+
+</p><p>
+If you discover what you believe to be
+a bug in the reference implementation,
+report it in the class forum.
+Andrew may fix the bug,
+or indicate that you do not need to match
+the reference implementation's behaviour in this case.
+
+
+</p><h2>Shrug Commands</h2>
+<h3>Subset 0</h3>
+<p>
+Subset 0 commands must be implemented in POSIX-compatible Shell.
+See the <strong>Permitted Languages</strong> section for more information.
+
+</p><h4>shrug-init</h4>
+<p>
+The <code>shrug-init</code> command creates an empty Shrug repository.
+
+</p><p>
+<code>shrug-init</code> should create a directory named <code>.shrug</code>,
+which it will use to store the repository.
+It should produce an error message if this directory already exists.
+
+</p><p>
+You should match this, and other error messages exactly.
+For example:
+
+
+
+</p><pre is="tty" style="max-height: 32em;overflow:  auto;"><kbd is="sh">ls -d .shrug</kbd>
+ls: cannot access '.shrug': No such file or directory
+<kbd is="sh">shrug-init</kbd>
+Initialized empty shrug repository in .shrug
+<kbd is="sh">ls -d .shrug</kbd>
+.shrug
+<kbd is="sh">shrug-init</kbd>
+shrug-init: error: .shrug already exists
+</pre>
+<p>
+<code>shrug-init</code> may create initial files or directories inside <code>.shrug</code>.
+
+</p><p>
+You do not have to use a particular representation to store the repository.
+
+</p><p>
+You do not have to create the same files or directories inside <code>shrug-init</code>
+as the reference implementation.
+
+
+</p><h4>shrug-add <var>filenames...</var></h4>
+<p>
+The <code>shrug-add</code> command
+adds the contents of one or more files
+to the <q><strong>index</strong></q>.
+
+</p><p>
+Files are added to the repository in a two step process.
+The first step is adding them to the index.
+
+</p><p>
+You will need to store files in the index somehow
+in the <code>.shrug</code> sub-directory.
+For example, you might choose store them in
+a sub-directory of <code>.shrug</code>.
+
+</p><p>
+Only ordinary files in the current directory can be added.
+You can assume filenames start with an alphanumeric character ([a-zA-Z0-9])
+and will only contain alpha-numeric characters,
+plus '.', '-' and '_' characters.
+
+</p><p>
+The <code>shrug-add</code> command,
+and other Shrug commands,
+will not be given pathnames with slashes.
+
+
+</p><h4>shrug-commit -m <var>message</var></h4>
+<p>
+The <code>shrug-commit</code> command
+saves a copy of all files in the index to the repository.
+
+</p><p>
+A message describing the commit must be included as part of the commit command.
+
+</p><p>
+Shrug commits are numbered sequentially:
+they are not hashes, like Git.
+You must match the numbering scheme.
+
+</p><p>
+You can assume the commit message is ASCII,
+does not contain new-line characters,
+and does not start with a '-' character.
+
+
+</p><h4>shrug-log</h4>
+<p>
+The <code>shrug-log</code> command prints
+a line for every commit made to the repository:
+each line should contain the commit number,
+and the commit message.
+
+
+</p><h4>shrug-show <var>[commit]</var>:<var>filename</var></h4>
+<p>
+The <code>shrug-show</code> should
+print the contents of the specified <var>filename</var>
+as of the specified <var>commit</var>.
+If <var>commit</var> is omitted,
+the contents of the file in the index
+should be printed.
+</p><p>
+You can assume the commit if specified will be a non-negative integer.
+</p><p>
+For example:
+
+
+
+</p><pre is="tty" style="max-height: 32em;overflow:  auto;"><kbd is="sh">./shrug-init</kbd>
+Initialized empty shrug repository in .shrug
+<kbd is="sh">echo line 1 &gt; a</kbd>
+<kbd is="sh">echo hello world &gt;b</kbd>
+<kbd is="sh">./shrug-add a b</kbd>
+<kbd is="sh">./shrug-commit -m 'first commit'</kbd>
+Committed as commit 0
+<kbd is="sh">echo  line 2 &gt;&gt;a</kbd>
+<kbd is="sh">./shrug-add a</kbd>
+<kbd is="sh">./shrug-commit -m 'second commit'</kbd>
+Committed as commit 1
+<kbd is="sh">./shrug-log</kbd>
+1 second commit
+0 first commit
+<kbd is="sh">echo line 3 &gt;&gt;a</kbd>
+<kbd is="sh">./shrug-add a</kbd>
+<kbd is="sh">echo line 4 &gt;&gt;a</kbd>
+<kbd is="sh">./shrug-show 0:a</kbd>
+line 1
+<kbd is="sh">./shrug-show 1:a</kbd>
+line 1
+line 2
+<kbd is="sh">./shrug-show :a</kbd>
+line 1
+line 2
+line 3
+<kbd is="sh">cat a</kbd>
+line 1
+line 2
+line 3
+line 4
+<kbd is="sh">./shrug-show 0:b</kbd>
+hello world
+<kbd is="sh">./shrug-show 1:b</kbd>
+hello world
+</pre>
+<h3>Subset 1</h3>
+<p>
+Subset 1 is more difficult.
+You will need spend some time
+understanding the semantics (meaning) of these operations,
+by running the reference implementation,
+or researching the equivalent Git operations.
+
+</p><p>
+Note the assessment scheme recognises this difficulty.
+
+</p><p>
+Subset 1 commands must be implemented in POSIX-compatible Shell.
+See the <strong>Permitted Languages</strong> section for more information.
+
+
+</p><h4>shrug-commit <var>[-a]</var> -m <var>message</var></h4>
+<p>
+<code>shrug-commit</code> can have a <code>-a</code> option,
+which causes all files already in the index
+to have their contents from the current directory
+added to the index before the commit.
+
+
+</p><h4>shrug-rm <var>[--force]</var> <var>[--cached]</var> <var>filenames...</var></h4>
+<p>
+<code>shrug-rm</code> removes a file from the index,
+or from the current directory and the index.
+
+</p><p>
+If the <code>--cached</code> option is specified,
+the file is removed only from the index,
+and not from the current directory.
+
+</p><p>
+<code>shrug-rm</code>, like <code>git rm</code>,
+should stop the user accidentally losing work,
+and should give an error message instead
+if the removal would cause the user to lose work.
+You will need to experiment with the reference implementation
+to discover these error messages.
+Researching <code>git rm</code>'s behaviour may also help.
+
+</p><p>
+The <code>--force</code> option overrides this,
+and will carry out the removal even if the user will lose work.
+
+
+</p><h4>shrug-status</h4>
+<p>
+<code>shrug-status</code> shows the status of files in
+the current directory, the index, and the repository.
+
+
+
+
+</p><pre is="tty" style="max-height: 32em;overflow:  auto;"><kbd is="sh">./shrug-init</kbd>
+Initialized empty shrug repository in .shrug
+<kbd is="sh">touch a b c d e f g h</kbd>
+<kbd is="sh">./shrug-add a b c d e f</kbd>
+<kbd is="sh">./shrug-commit -m 'first commit'</kbd>
+Committed as commit 0
+<kbd is="sh">echo hello &gt;a</kbd>
+<kbd is="sh">echo hello &gt;b</kbd>
+<kbd is="sh">echo hello &gt;c</kbd>
+<kbd is="sh">./shrug-add a b</kbd>
+<kbd is="sh">echo world &gt;a</kbd>
+<kbd is="sh">rm d</kbd>
+<kbd is="sh">./shrug-rm e</kbd>
+<kbd is="sh">./shrug-add g</kbd>
+<kbd is="sh">./shrug-status</kbd>
+a - file changed, different changes staged for commit
+b - file changed, changes staged for commit
+c - file changed, changes not staged for commit
+d - file deleted
+e - deleted
+f - same as repo
+g - added to index
+h - untracked
+shrug-add - untracked
+shrug-commit - untracked
+shrug-init - untracked
+shrug-rm - untracked
+shrug-status - untracked
+</pre>
+<h3>Subset 2</h3>
+<p>
+Subset 2 is extremely difficult.
+You will need spend considerable time
+understanding the semantics of these operations,
+by running the reference implementation,
+and/or researching the equivalent Git operations.
+
+</p><p>
+Note the assessment scheme recognises this difficulty.
+
+</p><p>
+Subset 2 commands must be implemented in POSIX-compatible Shell.
+See the <strong>Permitted Languages</strong> section for more information.
+
+
+</p><h4>shrug-branch <var>[-d]</var> <var>[branch-name]</var></h4>
+<p>
+<code>shrug-branch</code> either
+creates a branch,
+deletes a branch, or
+lists current branch names.
+
+
+</p><h4>shrug-checkout <var>branch-name</var></h4>
+<p>
+<code>shrug-checkout</code> switches branches.
+
+</p><p>
+Note that, unlike Git,
+you can not specify a commit or a file:
+you can only specify a branch.
+
+
+</p><h4>shrug-merge <var>branch-name</var>|<var>commit</var> -m <var>message</var></h4>
+<p>
+<code>shrug-merge</code>
+adds the changes that have been made to
+the specified branch or commit
+to the index, and commits them.
+
+
+
+</p><pre is="tty" style="max-height: 32em;overflow:  auto;"><kbd is="sh">./shrug-init</kbd>
+Initialized empty shrug repository in .shrug
+<kbd is="sh">seq 1 7 &gt;7.txt</kbd>
+<kbd is="sh">./shrug-add 7.txt</kbd>
+<kbd is="sh">./shrug-commit -m commit-1</kbd>
+Committed as commit 0
+<kbd is="sh">./shrug-branch b1</kbd>
+<kbd is="sh">./shrug-checkout b1</kbd>
+Switched to branch 'b1'
+<kbd is="sh">perl -pi -e 's/2/42/' 7.txt</kbd>
+<kbd is="sh">cat 7.txt</kbd>
+1
+42
+3
+4
+5
+6
+7
+<kbd is="sh">./shrug-commit -a -m commit-2</kbd>
+Committed as commit 1
+<kbd is="sh">./shrug-checkout master</kbd>
+Switched to branch 'master'
+<kbd is="sh">cat 7.txt</kbd>
+1
+2
+3
+4
+5
+6
+7
+<kbd is="sh">perl -pi -e 's/5/24/' 7.txt</kbd>
+<kbd is="sh">cat 7.txt</kbd>
+1
+2
+3
+4
+24
+6
+7
+<kbd is="sh">./shrug-commit -a -m commit-3</kbd>
+Committed as commit 2
+<kbd is="sh">./shrug-merge b1 -m merge-message</kbd>
+Auto-merging 7.txt
+<kbd is="sh">cat 7.txt</kbd>
+1
+42
+3
+4
+24
+6
+7
+</pre>
+<p>
+If a file contains conflicting changes,
+<code>shrug-merge</code> produces an error message.
+
+
+</p><pre is="tty" style="max-height: 32em;overflow:  auto;"><kbd is="sh">./shrug-init</kbd>
+Initialized empty shrug repository in .shrug
+<kbd is="sh">seq 1 7 &gt;7.txt</kbd>
+<kbd is="sh">./shrug-add 7.txt</kbd>
+<kbd is="sh">./shrug-commit -m commit-1</kbd>
+Committed as commit 0
+<kbd is="sh">./shrug-branch b1</kbd>
+<kbd is="sh">./shrug-checkout b1</kbd>
+Switched to branch 'b1'
+<kbd is="sh">perl -pi -e 's/2/42/' 7.txt</kbd>
+<kbd is="sh">cat 7.txt</kbd>
+1
+42
+3
+4
+5
+6
+7
+<kbd is="sh">./shrug-commit -a -m commit-2</kbd>
+Committed as commit 1
+<kbd is="sh">./shrug-checkout master</kbd>
+Switched to branch 'master'
+<kbd is="sh">cat 7.txt</kbd>
+1
+2
+3
+4
+5
+6
+7
+<kbd is="sh">perl -pi -e 's/2/24/' 7.txt</kbd>
+<kbd is="sh">cat 7.txt</kbd>
+1
+24
+3
+4
+5
+6
+7
+<kbd is="sh">./shrug-commit -a -m commit-3</kbd>
+Committed as commit 2
+<kbd is="sh">./shrug-merge b1 -m merge-message</kbd>
+shrug-merge: error: These files can not be merged:
+7.txt
+</pre>
+
+
+
+
+
+<h2>Diary</h2>
+<p>
+You must keep notes on each piece of work you make on this assignment.
+The notes should include date,
+starting and finishing time,
+and a brief description of the work carried out.
+For example:
+
+</p><p>
+</p><table class="table table-bordered">
+<tbody><tr><th>Date</th><th>Start</th><th>Stop</th><th>Activity</th><th>Comments
+</th></tr><tr><td>19/06/19</td><td>16:00</td><td>17:30</td><td>coding</td><td>implemented basic commit functionality
+</td></tr><tr><td>20/06/19</td><td>20:00</td><td>10:30</td><td>debugging</td><td>found bug in command-line arguments
+</td></tr></tbody></table>
+<p>
+Include these notes in the files you submit
+as an ASCII file named <code>diary.txt</code>.
+
+
+</p><h2>Testing</h2>
+<h3>Autotests</h3>
+<p>
+As usual, some autotests will be available:
+
+</p><pre is="tty"><kbd is="sh">2041 autotest shrug shrug-*</kbd>
+...
+</pre>
+<p>
+You can also run only tests for a particular subset or an individual test:
+
+</p><pre is="tty"><kbd is="sh">2041 autotest shrug subset1 shrug-*</kbd>
+...
+<kbd is="sh">2041 autotest shrug subset1_13 shrug-*</kbd>
+...
+</pre>
+<p>
+If you are using extra Shell files,
+include them on the autotest command line.
+
+</p><p>
+Autotest and automarking will run your scripts
+with a current working directory
+different to the directory containing the script.
+The directory containing your submission will be in <code>$PATH</code>.
+
+</p><p>
+You will need to do most of the testing yourself.
+
+
+</p><h3>Test Scripts</h3>
+<p>
+You should submit ten Shell scripts,
+named <code>test00.sh</code> to <code>test09.sh</code>,
+which run shrug commands that test an aspect of Shrug.
+
+</p><p>
+The <code>test??.sh</code> scripts
+do not have to be examples
+that your program implements successfully.
+
+</p><p>
+You may share your test examples with your friends,
+but the ones you submit must be your own creation.
+
+</p><p>
+The test scripts should show
+how you've thought about testing carefully.
+
+
+</p><h2>Permitted Languages</h2>
+<p>
+Your programs must be written entirely in POSIX-compatible shell.
+
+</p><p>
+Your programs will be run with <cite><a href="https://manpages.debian.org/jump?q=dash.1">dash(1)</a></cite>,
+in <code>/bin/dash</code>.
+You can assume anything that works with
+the version of <code>/bin/dash</code> on CSE systems
+is POSIX compatible.
+
+</p><p>
+Start your programs with:
+
+</p><pre class="program">#!/bin/dash
+</pre>
+<p>
+If you want to run these scripts on your own machine —
+for example, one running macOS —
+which has <cite><a href="https://manpages.debian.org/jump?q=dash.1">dash(1)</a></cite> installed
+somewhere other than <code>/bin</code>, use:
+
+</p><pre class="program">#!/usr/bin/env dash
+</pre>
+<p>
+You are permitted to use any feature <code>/bin/dash</code> provides.
+
+</p><p>
+On CSE systems,
+<code>/bin/sh</code> is the <abbr title="Bourne-again shell">Bash</abbr> shell:
+<code>/bin/sh</code> is a symlink to <code>/bin/bash</code>.
+Bash implements many non-POSIX extensions,
+including regular expressions and arrays.
+These <em>will not work</em> with <code>/bin/dash</code>,
+and you are not permitted to use these for the assignment.
+
+</p><p>
+You are not permitted to use Perl, Python or any language
+other than POSIX-compatible shell.
+
+</p><p>
+You are permitted to use only these external programs:
+
+
+
+</p><ul class="list-unstyled" style="columns: 6">
+
+<li><cite><a href="https://manpages.debian.org/jump?q=basename.1">basename(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=bunzip2.1">bunzip2(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=bzcat.1">bzcat(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=bzip2.1">bzip2(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=cat.1">cat(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=chmod.1">chmod(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=cmp.1">cmp(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=cp.1">cp(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=cpio.1">cpio(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=csplit.1">csplit(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=cut.1">cut(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=date.1">date(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=dc.1">dc(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=dd.1">dd(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=df.1">df(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=diff.1">diff(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=dirname.1">dirname(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=du.1">du(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=echo.1">echo(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=egrep.1">egrep(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=env.1">env(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=expand.1">expand(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=expr.1">expr(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=false.1">false(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=fgrep.1">fgrep(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=find.1">find(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=fold.1">fold(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=getopt.1">getopt(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=grep.1">grep(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=gunzip.1">gunzip(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=gzip.1">gzip(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=head.1">head(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=hostname.1">hostname(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=less.1">less(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=ln.1">ln(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=ls.1">ls(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=lzcat.1">lzcat(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=lzma.1">lzma(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=md5sum.1">md5sum(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=mkdir.1">mkdir(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=mktemp.1">mktemp(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=more.1">more(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=mv.1">mv(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=patch.1">patch(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=printf.1">printf(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=pwd.1">pwd(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=readlink.1">readlink(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=realpath.1">realpath(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=rev.1">rev(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=rm.1">rm(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=rmdir.1">rmdir(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=sed.1">sed(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=seq.1">seq(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=sha1sum.1">sha1sum(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=sha256sum.1">sha256sum(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=sha512sum.1">sha512sum(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=sleep.1">sleep(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=sort.1">sort(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=stat.1">stat(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=strings.1">strings(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=tac.1">tac(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=tail.1">tail(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=tar.1">tar(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=tee.1">tee(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=test.1">test(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=time.1">time(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=top.1">top(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=touch.1">touch(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=tr.1">tr(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=true.1">true(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=uname.1">uname(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=uncompress.1">uncompress(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=unexpand.1">unexpand(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=uniq.1">uniq(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=unlzma.1">unlzma(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=unxz.1">unxz(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=unzip.1">unzip(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=wc.1">wc(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=wget.1">wget(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=which.1">which(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=who.1">who(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=xargs.1">xargs(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=xz.1">xz(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=xzcat.1">xzcat(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=yes.1">yes(1)</a></cite>
+
+</li><li><cite><a href="https://manpages.debian.org/jump?q=zcat.1">zcat(1)</a></cite>
+
+</li></ul>
+<p>
+Only a few of the programs in the above list
+are likely to be useful for the assignment.
+</p><p>
+Note you are permitted to use built-in shell features including: <code>cd</code>, <code>exit</code>, <code>for</code>, <code>if</code>, <code>read</code>, <code>shift</code> and <code>while</code>.
+</p><p>
+If you wish to use an external program
+which is not in the above list,
+please ask in the class forum for it to be added.
+
+</p><p>
+You may submit extra Shell files.
+
+
+</p><h2>Assumptions/Clarifications</h2>
+<p>
+Like all good programmers,
+you should make as few assumptions as possible.
+
+</p><p>
+You can assume <code>shrug</code> commands
+are always run in the same directory as the repository,
+and only files from that directory are added to the repository.
+
+</p><p>
+You can assume the directory in which <code>shrug</code> commands are run
+will not contain sub-directories apart from <code>.shrug</code>.
+
+</p><p>
+You can assume where a branch name is expected
+a string will be supplied starting with an alphanumeric character ([a-zA-Z0-9]),
+and only containing alphanumeric characters plus '-' and '_'.
+In additon a branch name will not be supplied which is entirely numeric.
+This allows brnach names to be distinguished from commits when merging.
+</p><p>
+You can assume where a filenames is expected a string will be supplied
+starting with an alphanumeric character ([a-zA-Z0-9])
+and  only containing alpha-numeric characters,
+plus '.', '-' and '_' characters.
+</p><p>
+You can assume where a commit number is expected
+a string will be supplied which is a non-negative integer with no leading zeros.
+It will not contain white space or any other charcters except digits.
+
+</p><p>
+You can assume that
+<code>shrug-add</code>,
+<code>shrug-show</code>,
+and <code>shrug-rm</code>
+will be given just a filename,
+not pathnames with slashes.
+
+</p><p>
+You do not have to consider file permissions or other file metadata.
+For example,
+you do not have to ensure files created by a checkout command
+have the same permissions as when they were added.
+
+</p><p>
+You do not have to handle concurrency.
+You can assume only one instance of
+any <code>shrug</code> command is running at any time.
+
+</p><p>
+You can assume that
+only the arguments described above
+are supplied to <code>shrug</code> commands.
+You do not have to handle other arguments.
+
+</p><p>
+You should match the output streams
+used by the reference implementations.
+It writes error messages to stderr: so should you.
+
+</p><p>
+You should match the exit status
+used by the reference implementation.
+It exits with status 1 after an error: so should you.
+
+</p><p>
+Autotest and automarking will run your scripts
+with a current working directory
+different to the directory containing the script.
+This may break Shell with code in extra files:
+if so, ask for help in the forum.
+The directory containing your submission will be in <code>$PATH</code>.
+
+</p><p>
+You can assume arguments will be in
+the position and order shown
+in the usage message from the reference implementation.
+Other orders and positions will not be tested.
+For example, here is the usage message for <code>shrug-rm</code>:
+
+</p><pre is="tty"><kbd is="sh">2041 shrug-rm</kbd>
+usage: shrug-rm [--force] [--cached] &lt;filenames&gt;
+</pre>
+<p>
+So, you assume that if the <code>--force</code>
+or <code>--cached</code> options are present,
+they come before all filenames,
+and if they are both present
+the <code>--force</code> option will come first.
+
+
+</p><h2>Change Log</h2>
+<dl class="row">
+<dt class="col-3">
+    Version 0.1<br>
+    <small>(2020-06-26 14:00)</small>
+  </dt>
+  <dd class="col-9">
+    <ul>
+      <li>Initial release</li>
+    </ul>
+  </dd><dt class="col-3">
+    Version 0.2<br>
+    <small>(2020-07-06 21:00)</small>
+  </dt>
+  <dd class="col-9">
+    <ul>
+      <li>bug in reference implementation fixed for shrug-status when file changed or removed after being added</li>
+    </ul>
+  </dd><dt class="col-3">
+    Version 0.3<br>
+    <small>(2020-07-06 16:00)</small>
+  </dt>
+  <dd class="col-9">
+    <ul>
+      <li>bug in reference implementation fixed for shrug-show for file in index before first commit</li>
+    </ul>
+  </dd><dt class="col-3">
+    Version 0.4<br>
+    <small>(2020-07-06 16:00)</small>
+  </dt>
+  <dd class="col-9">
+    <ul>
+      <li>add clarification about what can be supplied as arguments - fix minor bug in reference implementation for certain commit messages</li>
+    </ul>
+  </dd>
+</dl>
+<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+
+
+
+
+
+
+
+
+<p>
+When you think your program is working,
+you can use <code>autotest</code>
+to run some simple automated tests:
+
+</p><pre is="tty"><kbd is="sh">2041 autotest shrug</kbd>
+</pre>
+
+
+
+<section class="exercise ">
+    <header><h3>Assessment</h3></header>
+    
+
+
+<h3>Submission</h3>
+<p>
+When you are finished working on the assignment,
+you must submit your work by running <code>give</code>:
+
+
+</p><pre is="tty"><kbd is="sh">give cs2041 ass1_shrug shrug-* diary.txt test??.sh <var>[any-other-files]</var></kbd>
+</pre>
+
+
+<p>
+You must run <code>give</code> before <strong>Sunday    July 15 21:59 2020</strong>
+to obtain the marks for this assignment.
+Note that this is an individual exercise,
+the work you submit with <code>give</code> must be entirely your own.
+
+</p><p>
+You can run <code>give</code> multiple times.
+Only your last submission will be marked.
+
+</p><p>
+If you are working at home, you may find it more convenient
+to upload your work via
+<a href="https://cgi.cse.unsw.edu.au/~give/Student/give.php">give's web interface</a>.
+
+</p><p>
+You cannot obtain marks by e-mailing your code to tutors or lecturers.
+
+</p><p>
+You check the files you have submitted <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/student/">here</a>.
+
+</p><p>
+Automarking will be run by the lecturer after the submission deadline,
+using test cases different to those <code>autotest</code> runs for you.
+(Hint: do your own testing as well as running <code>autotest</code>.)
+
+</p><p>
+Manual marking will be done by your tutor,
+who will mark for style and readability,
+as described in the <strong>Assessment</strong> section below.
+After your tutor has assessed your work,
+you can <a href="https://cgi.cse.unsw.edu.au/~cs2041/20T2/student/">view your results here</a>;
+The resulting mark will also be available
+<a href="https://cgi.cse.unsw.edu.au/~give/Student/sturec.php">via give's web interface</a>.
+
+
+
+
+</p><h3>Due Date</h3>
+<p>
+This assignment is tentatively due <strong>Sunday    July 15 21:59 2020</strong>.
+</p><p>
+If your assignment is submitted after this date,
+each hour it is late
+reduces the maximum mark it can achieve by 2%.
+For example,
+if an assignment worth 74% was submitted 10 hours late,
+the late submission would have no effect.
+If the same assignment was submitted 15 hours late,
+it would be awarded 70%,
+the maximum mark it can achieve at that time.
+
+
+
+</p><h2>Assessment Scheme</h2>
+
+<p>
+This assignment will contribute 15 marks
+to your final COMP(2041|9044) mark
+
+</p><p>
+15% of the marks for assignment 1 will come from hand-marking.
+These marks will be awarded on the basis of
+clarity, commenting, elegance and style:
+in other words, you will be assessed on
+how easy it is for a human to read and understand your program.
+
+</p><p>
+5% of the marks for assignment 1
+will be based on the test suite you submit.
+
+</p><p>
+80% of the marks for assignment 1
+will come from the performance of your code on a large series of tests.
+
+</p><p>
+An indicative assessment scheme follows.
+The lecturer may vary the assessment scheme
+after inspecting the assignment submissions,
+but it is likely to be broadly similar to the following:
+
+
+</p><table class="table table-sm w-75 mx-auto">
+<tbody>
+<tr><th scope="row">HD (85+)
+    </th><td>All subsets working; code is beautiful; great test suite and diary
+</td></tr><tr><th scope="row">DN (75+)
+    </th><td>Subset 1 working; good clear code; good test suite and diary
+</td></tr><tr><th scope="row">CR (65+)
+    </th><td>Subset 0 working; good clear code; good test suite and diary
+</td></tr><tr><th scope="row">PS (55+)
+    </th><td>Subset 0 passing some tests; code is reasonably readable; reasonable test suite and diary
+</td></tr><tr><th scope="row">PS (50+)
+    </th><td>Good progress on assignment, but not passing autotests
+</td></tr><tr><th scope="row">0%
+    </th><td>knowingly providing your work to anyone <br>
+        and it is subsequently submitted (by anyone).
+</td></tr><tr><th scope="row">0 FL for <br> COMP(2041|9044)
+    </th><td>submitting any other person's work; this includes joint work.
+</td></tr><tr><th scope="row">academic <br> misconduct
+    </th><td>submitting another person's work without their consent;<br>
+        paying another person to do work for you.
+</td></tr></tbody>
+</table>
+
+
+
+
+<h3>Intermediate Versions of Work</h3>
+<p>
+You are required to submit intermediate versions of your assignment.
+</p><p>
+Every time you work on the assignment
+and make some progress
+you should copy your work to your CSE account
+and submit it using the <code>give</code> command below.
+It is fine if intermediate versions do not compile
+or otherwise fail submission tests.
+Only the final submitted version of your assignment will be marked.
+</p><p>
+All these intermediate versions of your work
+will be placed in a Git repository
+and made available to you via a web interface
+at <code>https://gitlab.cse.unsw.edu.au/<var>z5555555</var>/20T2-comp2041-ass1_shrug</code>
+(replacing <i>z5555555</i> with your own zID).
+This will allow you to retrieve earlier versions of your code if needed.
+
+
+
+</p><h3>Attribution of Work</h3>
+
+<p>
+This is an individual assignment.
+
+</p><p>
+The work you submit must be entirely your own work,
+apart from any exceptions explicitly included
+in the assignment specification above.
+Submission of work partially or completely derived from any other person
+or jointly written with any other person is not permitted.
+
+</p><p>
+You are only permitted to request help with the assignment
+in the course forum, help sessions,
+or from the teaching staff (the lecturer(s) and tutors) of COMP(2041|9044).
+
+</p><p>
+Do not provide or show your assignment work to any other person
+(including by posting it on the forum),
+apart from the teaching staff of COMP(2041|9044).
+If you knowingly provide or show your assignment work
+to another person for any reason,
+and work derived from it is submitted,
+you may be penalized,
+even if that work was submitted
+without your knowledge or consent;
+this may apply even if your work is submitted by
+a third party unknown to you.
+You will not be penalized
+if your work is taken
+without your consent or knowledge.
+
+</p><p>
+Submissions that violate these conditions will be penalised.
+Penalties may include negative marks,
+automatic failure of the course,
+and possibly other academic discipline.
+We are also required to report
+acts of plagiarism or other student misconduct:
+if students involved hold scholarships,
+this may result in a loss of the scholarship.
+This may also result in the loss of a student visa.
+
+</p><p>
+Assignment submissions will be examined,
+both automatically and manually,
+for such submissions.
+
+
+
+    </p></section>  
+
+
+
+
+
+</main>
+
+<footer class="mt-3 pt-3 bg-dark text-center no-print">
+<p class="text-muted">
+<strong>COMP(2041|9044) 20T2: Software Construction</strong>
+is brought to you by <br>
+the <a href="https://www.cse.unsw.edu.au/">School of Computer Science and Engineering</a><br>
+at the <a href="https://www.unsw.edu.au/">University of New South Wales</a>, Sydney.<br>
+For all enquiries, please email the class account at
+<a href="mailto:@cse.unsw.edu.au">cs2041@cse.unsw.edu.au</a><br>
+
+<small>CRICOS Provider 00098G</small>
+</p>
+
+
+</footer>
+
+
+</body></html>
