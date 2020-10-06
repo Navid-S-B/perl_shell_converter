@@ -1,4 +1,4 @@
-# Converting Shell Script to Perl Scripts
+# Sheeple -> Converting Shell Script to Perl Scripts
 sheeple.pl converts simple and indented shell scripts with if/else if/else statements, for loops, while loops,and other simple test cases!
 
 However the code assumes a well formatted input, which is not a safe assumption as tiny semantic erros in code can result the conversion possibly breaking.
